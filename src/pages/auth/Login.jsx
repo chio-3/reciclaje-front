@@ -27,8 +27,14 @@ export default function Login() {
 
   const onSubmit = (data) => {
     alert("Formulario válido ✅");
-    navigate("/inicio");
     console.log(data);
+    if(data.email.includes("admin")){
+      navigate("/admin");
+      return;
+    }else{
+
+      navigate("/inicio");
+    }
   };
 
   return (

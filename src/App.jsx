@@ -9,6 +9,15 @@ import RegistrarInorganico from "./pages/user/RegistrarInorganico";
 import RegistrarOrganico from "./pages/user/RegistrarOrganico";
 import VisualizarPuntos from "./pages/user/VisualizarPuntos";
 import ReporteImpacto from "./pages/user/Reporte";
+import CanjearRecompensa from "./pages/user/CanjearRecompensa";
+import Catalogo from "./pages/user/Catalogo";
+import ConfirmarCanje from "./pages/user/ConfirmarCanje";
+import MisPuntos from "./pages/user/Puntos";
+import Promociones from "./pages/user/Promociones";
+import CanjeHistorial from "./pages/user/Canje";
+import HistorialPuntos from "./pages/user/Historial";
+import AdminCanjearRecompensa from "./pages/admin/AdminCanjearRecompensa";
+import { AdminDashboardTemplate } from "./components/AdminDashboardTemplate";
 
 function App() {
   return (
@@ -64,7 +73,72 @@ function App() {
             </UserDashboardTemplate>
           }
         />
+        <Route
+          path="/canjear-recompensa"
+          element={
+            <UserDashboardTemplate>
+              <CanjearRecompensa />
+            </UserDashboardTemplate>
+          }
+        />
+        <Route
+          path="/catalogo"
+          element={
+            <UserDashboardTemplate>
+              <Catalogo />
+            </UserDashboardTemplate>
+          }
+        />
+        <Route
+          path="/confirmar-canje"
+          element={
+            <UserDashboardTemplate>
+              <ConfirmarCanje />
+            </UserDashboardTemplate>
+          }
+        />
+        <Route
+          path="/puntos-acumulados"
+          element={
+            <UserDashboardTemplate>
+              <MisPuntos />
+            </UserDashboardTemplate>
+          }
+        />
+        <Route
+          path="/promociones"
+          element={
+            <UserDashboardTemplate>
+              <Promociones />
+            </UserDashboardTemplate>
+          }
+        />
+        <Route
+          path="/canje"
+          element={
+            <UserDashboardTemplate>
+              <CanjeHistorial />
+            </UserDashboardTemplate>
+          }
+        />
+        <Route
+          path="/user-historial"
+          element={
+            <UserDashboardTemplate>
+              <HistorialPuntos />
+            </UserDashboardTemplate>
+          }
+        />
+         <Route
+          path="/admin"
+          element={
+            <AdminDashboardTemplate>
+              <AdminCanjearRecompensa />
+            </AdminDashboardTemplate>
+          }
+        />
       </Routes>
+     
     </>
   );
 }
