@@ -21,14 +21,17 @@ const rewards = [
 ];
 
 const AdminCatalogo = () => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   return (
     <div className=" text-white min-h-screen">
       <h1 className="text-xl font-bold mb-4">Catalogo</h1>
 
       <div className="space-y-4 mb-6 bg-green-400 p-4">
         {rewards.map((reward, index) => (
-          <div key={index} className="bg-green-600 rounded-lg p-4 flex items-start justify-between">
+          <div
+            key={index}
+            className="bg-green-600 rounded-lg p-4 flex items-start justify-between"
+          >
             <div className="flex items-start gap-3">
               <div className="mt-1">{reward.icon}</div>
               <div>
@@ -36,16 +39,23 @@ const AdminCatalogo = () => {
                 <p className="text-sm text-white">{reward.description}</p>
               </div>
             </div>
-            <button onClick={() => navigate("/confirmar-canje")} className="bg-red-600 hover:bg-red-700 text-white px-4 py-1 rounded font-bold text-sm">
+            <button
+              onClick={() => navigate("/confirmar-canje")}
+              className="bg-red-600 hover:bg-red-700 text-white px-4 py-1 rounded font-bold text-sm"
+            >
               CANJEAR
             </button>
           </div>
         ))}
       </div>
-
-      <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded font-bold">
-        Atras
-      </button>
+      <div className="flex items-center gap-50 justify-end">
+        <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded font-bold">
+          Editar
+        </button>
+        <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded font-bold">
+          Añadir
+        </button>
+      </div>
     </div>
   );
 };

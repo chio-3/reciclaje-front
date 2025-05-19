@@ -18,6 +18,17 @@ import CanjeHistorial from "./pages/user/Canje";
 import HistorialPuntos from "./pages/user/Historial";
 import AdminCanjearRecompensa from "./pages/admin/AdminCanjearRecompensa";
 import { AdminDashboardTemplate } from "./components/AdminDashboardTemplate";
+import AdminCatalogo from "./pages/admin/AdminCatalogo";
+import AdminReporte from "./pages/admin/AdminReporte";
+import EditarReciclaje from "./pages/admin/EditarReciclaje";
+import AdminPuntosReciclaje from "./pages/admin/AdminPuntosReciclaje";
+import AdminDashboard from "./pages/admin/AdminDashboard";
+import AdminBitacoraUser from "./pages/admin/BitacoraUser";
+import LoginSelectMaterial from "./pages/maquina/login";
+import MaquinaOrganica from "./pages/maquina/MaquinaOrganica";
+import MaquinaInorganica from "./pages/maquina/MaquinaInorganica";
+import SuccesOrganica from "./pages/maquina/SuccesOrganica";
+import MaquinaSuccess from "./pages/maquina/MaquinaSuccess";
 
 function App() {
   return (
@@ -129,7 +140,7 @@ function App() {
             </UserDashboardTemplate>
           }
         />
-         <Route
+        <Route
           path="/admin"
           element={
             <AdminDashboardTemplate>
@@ -137,8 +148,76 @@ function App() {
             </AdminDashboardTemplate>
           }
         />
+        <Route
+          path="/admin/catalogo"
+          element={
+            <AdminDashboardTemplate>
+              <AdminCatalogo />
+            </AdminDashboardTemplate>
+          }
+        />
+        <Route
+          path="/admin/reporte"
+          element={
+            <AdminDashboardTemplate>
+              <AdminReporte />
+            </AdminDashboardTemplate>
+          }
+        />
+        <Route
+          path="/admin/editar-reciclaje"
+          element={
+            <AdminDashboardTemplate>
+              <AdminReporte />
+            </AdminDashboardTemplate>
+          }
+        />
+        <Route
+          path="/admin/puntos-reciclaje"
+          element={
+            <AdminDashboardTemplate>
+              <AdminPuntosReciclaje />
+            </AdminDashboardTemplate>
+          }
+        />
+        <Route
+          path="/admin/dashboard"
+          element={
+            <AdminDashboardTemplate>
+              <AdminDashboard />
+            </AdminDashboardTemplate>
+          }
+        />
+        <Route
+          path="/admin/bitacora-usuario"
+          element={
+            <AdminDashboardTemplate>
+              <AdminBitacoraUser/>
+            </AdminDashboardTemplate>
+          }
+        />
+        <Route
+          path="/maquina"
+          element={<LoginSelectMaterial></LoginSelectMaterial>}
+        />
+        <Route
+          path="/maquina/organico"
+          element={<MaquinaOrganica></MaquinaOrganica>}
+        />
+         <Route
+          path="/maquina/inorganico"
+          element={<MaquinaInorganica></MaquinaInorganica>}
+        />
+        <Route
+          path="/maquina/sucess-organica"
+          element={<SuccesOrganica></SuccesOrganica>}
+        />
+        <Route
+          path="/maquina/success"
+          element={<MaquinaSuccess></MaquinaSuccess>}
+        />
+
       </Routes>
-     
     </>
   );
 }

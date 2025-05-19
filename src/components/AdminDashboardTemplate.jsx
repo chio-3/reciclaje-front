@@ -26,7 +26,7 @@ export const AdminDashboardTemplate = ({ children }) => {
               <ul className="space-y-3">
                 <li className="w-full ">
                   <button
-                    onClick={() => navigate("/registrar-reciclaje")}
+                    onClick={() => navigate("/admin")}
                     className="w-full bg-green-600 hover:bg-green-700  text-white py-2 px-4 rounded"
                   >
                     Editar canje recompensa
@@ -35,7 +35,7 @@ export const AdminDashboardTemplate = ({ children }) => {
                 
                 <li className="w-full ">
                   <button
-                    onClick={() => navigate("/puntos-reciclaje")}
+                    onClick={() => navigate("/admin/catalogo")}
                     className="w-full bg-green-600 hover:bg-green-700  text-white py-2 px-4 rounded"
                   >
                     Editar catalogo
@@ -43,7 +43,7 @@ export const AdminDashboardTemplate = ({ children }) => {
                 </li>
                 <li className="w-full ">
                   <button
-                    onClick={() => navigate("/reporte-impacto")}
+                    onClick={() => navigate("/admin/reporte")}
                     className="w-full bg-green-600 hover:bg-green-700  text-white py-2 px-4 rounded"
                   >
                     Reporte de impacto total
@@ -51,7 +51,7 @@ export const AdminDashboardTemplate = ({ children }) => {
                 </li>
                 <li className="w-full ">
                   <button
-                    onClick={() => navigate("/canjear-recompensa")}
+                    onClick={() => navigate("/admin/editar-reciclaje")}
                     className="w-full bg-green-600 hover:bg-green-700  text-white py-2 px-4 rounded"
                   >
                     Editar material de reciclaje
@@ -59,7 +59,7 @@ export const AdminDashboardTemplate = ({ children }) => {
                 </li>
                 <li className="w-full ">
                   <button
-                    onClick={() => navigate("/puntos-acumulados")}
+                    onClick={() => navigate("/admin/dashboard")}
                     className="w-full bg-green-600 hover:bg-green-700  text-white py-2 px-4 rounded"
                   >
                     Dashboar
@@ -67,7 +67,7 @@ export const AdminDashboardTemplate = ({ children }) => {
                 </li>
                 <li className="w-full ">
                   <button
-                    onClick={() => navigate("/catalogo")}
+                    onClick={() => navigate("/admin/puntos-reciclaje")}
                     className="w-full bg-green-600 hover:bg-green-700  text-white py-2 px-4 rounded"
                   >
                     Agregar puntos de reciclaje
@@ -75,7 +75,7 @@ export const AdminDashboardTemplate = ({ children }) => {
                 </li>
                 <li className="w-full ">
                   <button
-                   onClick={() => navigate("/nivel")}
+                   onClick={() => navigate("/admin/bitacora-canje")}
                     className="w-full bg-green-600 hover:bg-green-700  text-white py-2 px-4 rounded"
                   >
                     Bitacora de canje
@@ -83,7 +83,7 @@ export const AdminDashboardTemplate = ({ children }) => {
                 </li>
                 <li className="w-full ">
                   <button
-                    onClick ={() => navigate("/editar-perfil")}
+                    onClick ={() => navigate("/admin/bitacora-usuario")}
                     className="w-full bg-green-600 hover:bg-green-700  text-white py-2 px-4 rounded"
                   >
                     Bitacora usuario
